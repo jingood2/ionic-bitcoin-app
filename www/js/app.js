@@ -103,9 +103,10 @@ angular.module('App', ['ionic','App.services','highcharts-ng'])
     }
   })
   .state('tabs.history', {
-    url: '/history',
+    url: '/history/:currency',
     views: {
       'history-tab' : {
+        controller: 'HistoryController',
         templateUrl : 'views/history/history.html'
       }
 
@@ -116,7 +117,8 @@ angular.module('App', ['ionic','App.services','highcharts-ng'])
     url: '/currencies',
     views: {
       'currencies-tab' : {
-        templateUrl : 'views/currencies/currencies.html'
+        templateUrl : 'views/currencies/currencies.html',
+        controller : 'CurrenciesController'
       }
 
     }
